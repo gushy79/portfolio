@@ -688,7 +688,7 @@
 
 .footer__title {
   font-size: var(--font-size-body-sm);
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 .footer__social {
@@ -709,7 +709,7 @@
 
 .footer__copyright {
   font-size: var(--font-size-caption);
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
   text-align: center;
 }
 

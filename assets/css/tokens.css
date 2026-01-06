@@ -15,6 +15,7 @@
 
   /* Accent Colours */
   --color-accent: #0D9488;            /* Teal - CTAs, links, key highlights */
+  --color-accent-dark: #115E59;       /* Darker Teal - Small text for better contrast */
   --color-accent-hover: #0F766E;      /* Deep Teal - Interactive hover states */
   --color-accent-light: #CCFBF1;      /* Pale Teal - Subtle accent backgrounds */
   --color-warm: #D97706;              /* Amber - Metrics only (large text) */
