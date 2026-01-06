@@ -1,0 +1,339 @@
+/**
+ * Typography System
+ * Type scale, font loading, and text styles
+ * Based on Inter with 1.25 ratio (Major Third)
+ */
+
+/* ==========================================================================
+   BASE TYPOGRAPHY
+   ========================================================================== */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-50);
+}
+
+/* ==========================================================================
+   HEADING STYLES
+   ========================================================================== */
+
+.display {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-display);
+  color: var(--color-neutral-800);
+  max-width: 14ch;
+}
+
+h1,
+.h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-h1);
+  color: var(--color-neutral-800);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-h2);
+  color: var(--color-neutral-800);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-h3);
+  color: var(--color-neutral-800);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-neutral-800);
+}
+
+/* ==========================================================================
+   BODY TEXT STYLES
+   ========================================================================== */
+
+.body-lg {
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-body-lg);
+  color: var(--color-neutral-600);
+}
+
+.body-sm {
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-neutral-600);
+}
+
+/* ==========================================================================
+   UTILITY TEXT STYLES
+   ========================================================================== */
+
+.caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body-sm);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-neutral-500);
+}
+
+.overline {
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   METRIC STYLE
+   For large numbers using JetBrains Mono
+   ========================================================================== */
+
+.metric {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-metric);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-h1);
+  color: var(--color-warm);
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ==========================================================================
+   PARAGRAPH SPACING
+   ========================================================================== */
+
+p + p {
+  margin-top: 1.5em;
+}
+
+/* Lead paragraph (first paragraph of section) */
+.lead {
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-body-lg);
+  color: var(--color-neutral-600);
+}
+
+/* ==========================================================================
+   LIST STYLES
+   ========================================================================== */
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose li::marker {
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   LINK STYLES
+   ========================================================================== */
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Text links (within body copy) */
+.text-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-light);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color var(--transition-fast);
+}
+
+.text-link:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   EMPHASIS AND STRONG
+   ========================================================================== */
+
+strong,
+b {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-800);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* ==========================================================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================================================== */
+
+/* Mobile typography adjustments */
+@media (max-width: 639px) {
+  .display {
+    font-size: 2.5rem;  /* 40px */
+  }
+
+  h1,
+  .h1 {
+    font-size: 2rem;    /* 32px */
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.625rem; /* 26px */
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.25rem;  /* 20px */
+  }
+
+  h4,
+  .h4 {
+    font-size: 1rem;     /* 16px */
+  }
+
+  .body-lg {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  body,
+  .body {
+    font-size: 1rem;     /* 16px */
+  }
+
+  .body-sm {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .caption {
+    font-size: 0.75rem;  /* 12px */
+  }
+
+  .overline {
+    font-size: 0.6875rem; /* 11px */
+  }
+
+  .metric {
+    font-size: 2.25rem;  /* 36px */
+  }
+}
+
+/* Tablet typography adjustments */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .display {
+    font-size: 3rem;     /* 48px */
+  }
+}
+
+/* ==========================================================================
+   TEXT ALIGNMENT
+   ========================================================================== */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ==========================================================================
+   TEXT TRANSFORMS
+   ========================================================================== */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* ==========================================================================
+   LINE LENGTH CONSTRAINTS
+   Optimal reading: 60-75 characters
+   ========================================================================== */
+
+.text-prose {
+  max-width: var(--container-text);
+}
+
+.text-constrained {
+  max-width: 50ch;
+}
+
+/* ==========================================================================
+   TEXT COLOURS
+   ========================================================================== */
+
+.text-primary {
+  color: var(--color-neutral-800);
+}
+
+.text-secondary {
+  color: var(--color-neutral-600);
+}
+
+.text-muted {
+  color: var(--color-neutral-500);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-light {
+  color: var(--color-neutral-300);
+}

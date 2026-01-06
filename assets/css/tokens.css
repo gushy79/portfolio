@@ -1,0 +1,207 @@
+/**
+ * Design Tokens
+ * CSS Custom Properties for Nick Gushlow's Portfolio
+ * Based on "Confident Clarity" design specification v1.3
+ */
+
+:root {
+  /* ==========================================================================
+     COLOUR TOKENS
+     ========================================================================== */
+
+  /* Primary Colours */
+  --color-primary: #1E293B;           /* Deep Slate - Headlines, primary text */
+  --color-primary-light: #334155;     /* Slate - Secondary text, hover states */
+
+  /* Accent Colours */
+  --color-accent: #0D9488;            /* Teal - CTAs, links, key highlights */
+  --color-accent-hover: #0F766E;      /* Deep Teal - Interactive hover states */
+  --color-accent-light: #CCFBF1;      /* Pale Teal - Subtle accent backgrounds */
+  --color-warm: #D97706;              /* Amber - Metrics only (large text) */
+
+  /* Neutral Scale */
+  --color-neutral-900: #0F172A;       /* Darkest - Footer background */
+  --color-neutral-800: #1E293B;       /* Primary headlines */
+  --color-neutral-700: #334155;       /* Body text */
+  --color-neutral-600: #475569;       /* Secondary text */
+  --color-neutral-500: #64748B;       /* Tertiary text, captions */
+  --color-neutral-400: #94A3B8;       /* Borders, muted elements */
+  --color-neutral-300: #CBD5E1;       /* Light borders, dividers */
+  --color-neutral-200: #E2E8F0;       /* Subtle backgrounds */
+  --color-neutral-100: #F1F5F9;       /* Section backgrounds (alternating) */
+  --color-neutral-50: #F8FAFC;        /* Primary background */
+  --color-white: #FFFFFF;             /* Cards, elevated surfaces */
+
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS
+     ========================================================================== */
+
+  /* Font Families */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  /* Font Sizes - Desktop */
+  --font-size-display: 3.5rem;        /* 56px - Hero headline only */
+  --font-size-h1: 2.5rem;             /* 40px - Section titles */
+  --font-size-h2: 2rem;               /* 32px - Subsection titles */
+  --font-size-h3: 1.5rem;             /* 24px - Card titles */
+  --font-size-h4: 1.125rem;           /* 18px - Small headings */
+  --font-size-body-lg: 1.25rem;       /* 20px - Lead paragraphs */
+  --font-size-body: 1.0625rem;        /* 17px - Default body text */
+  --font-size-body-sm: 0.9375rem;     /* 15px - Secondary text */
+  --font-size-caption: 0.8125rem;     /* 13px - Metadata, labels */
+  --font-size-overline: 0.75rem;      /* 12px - Section labels (uppercase) */
+  --font-size-metric: 3rem;           /* 48px - Large numbers */
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;           /* Display, metrics */
+  --line-height-snug: 1.2;            /* h1 */
+  --line-height-heading: 1.25;        /* h2 */
+  --line-height-relaxed: 1.3;         /* h3 */
+  --line-height-normal: 1.4;          /* h4, overline */
+  --line-height-body-sm: 1.5;         /* Caption */
+  --line-height-body: 1.6;            /* Body-sm */
+  --line-height-body-lg: 1.65;        /* Body-lg */
+  --line-height-loose: 1.7;           /* Body default */
+
+  /* Letter Spacing */
+  --letter-spacing-display: -0.025em; /* Display headlines */
+  --letter-spacing-h1: -0.02em;       /* h1 */
+  --letter-spacing-h2: -0.015em;      /* h2 */
+  --letter-spacing-h3: -0.01em;       /* h3 */
+  --letter-spacing-normal: 0;         /* Body text */
+  --letter-spacing-wide: 0.02em;      /* Caption */
+  --letter-spacing-wider: 0.08em;     /* Overline (uppercase) */
+
+  /* ==========================================================================
+     SPACING TOKENS
+     8-point grid system
+     ========================================================================== */
+
+  --space-1: 0.25rem;                 /* 4px - Tight gaps, icon margins */
+  --space-2: 0.5rem;                  /* 8px - Small element spacing */
+  --space-3: 0.75rem;                 /* 12px - Button padding vertical */
+  --space-4: 1rem;                    /* 16px - Default component padding */
+  --space-5: 1.5rem;                  /* 24px - Card padding, medium gaps */
+  --space-6: 2rem;                    /* 32px - Between related groups */
+  --space-8: 3rem;                    /* 48px - Section spacing (mobile) */
+  --space-10: 4rem;                   /* 64px - Section spacing (tablet) */
+  --space-12: 5rem;                   /* 80px - Section spacing (desktop) */
+  --space-16: 8rem;                   /* 128px - Hero padding, major breaks */
+
+  /* ==========================================================================
+     LAYOUT TOKENS
+     ========================================================================== */
+
+  /* Container widths */
+  --container-max: 82.5rem;           /* 1320px - Maximum content width */
+  --container-content: 75rem;         /* 1200px - Standard content width */
+  --container-narrow: 48rem;          /* 768px - Narrow content (text) */
+  --container-text: 38rem;            /* 608px - Optimal line length */
+
+  /* Grid gutters */
+  --gutter-mobile: 1rem;              /* 16px */
+  --gutter-tablet: 1.5rem;            /* 24px */
+  --gutter-desktop: 1.5rem;           /* 24px */
+  --gutter-wide: 2rem;                /* 32px */
+
+  /* Container margins */
+  --margin-mobile: 1.25rem;           /* 20px */
+  --margin-tablet: 2.5rem;            /* 40px */
+  --margin-desktop: 4rem;             /* 64px */
+
+  /* Navigation */
+  --nav-height-desktop: 4.5rem;       /* 72px */
+  --nav-height-mobile: 4rem;          /* 64px */
+
+  /* ==========================================================================
+     TRANSITION TOKENS
+     ========================================================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease-out;
+  --transition-slow: 500ms ease-out;
+
+  /* Animation durations */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 500ms;
+
+  /* Easing functions */
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ==========================================================================
+     SHADOW TOKENS
+     ========================================================================== */
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 12px 24px rgba(15, 23, 42, 0.12);
+  --shadow-xl: 0 20px 40px rgba(15, 23, 42, 0.15);
+
+  /* Card-specific shadows */
+  --shadow-card-hover: 0 12px 24px rgba(15, 23, 42, 0.08);
+  --shadow-button-hover: 0 4px 12px rgba(13, 148, 136, 0.25);
+
+  /* ==========================================================================
+     BORDER RADIUS TOKENS
+     ========================================================================== */
+
+  --radius-sm: 0.25rem;               /* 4px */
+  --radius-md: 0.375rem;              /* 6px */
+  --radius-lg: 0.5rem;                /* 8px */
+  --radius-xl: 0.75rem;               /* 12px */
+  --radius-full: 9999px;              /* Circular */
+
+  /* ==========================================================================
+     Z-INDEX SCALE
+     ========================================================================== */
+
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-skip-link: 1000;
+
+  /* ==========================================================================
+     FOCUS TOKENS
+     ========================================================================== */
+
+  --focus-ring-color: var(--color-accent);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 3px;
+}
+
+/* ==========================================================================
+   BREAKPOINT REFERENCE (cannot be CSS variables - for documentation)
+   Mobile:  < 640px   (4 columns)
+   Tablet:  640-1023px (8 columns)
+   Desktop: 1024-1439px (12 columns)
+   Wide:    1440px+   (12 columns)
+   ========================================================================== */
+
+/* ==========================================================================
+   REDUCED MOTION PREFERENCES
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
