@@ -37,7 +37,7 @@
 }
 
 .btn--primary:hover {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-accent);
   transform: translateY(-1px);
   box-shadow: var(--shadow-button-hover);
   text-decoration: none;
@@ -368,7 +368,7 @@
   font-size: var(--font-size-overline);
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-wider);
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   margin-bottom: var(--space-3);
 }
 
@@ -410,7 +410,7 @@
   gap: var(--space-2);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-medium);
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   margin-top: var(--space-4);
 }
 
@@ -738,7 +738,7 @@
 }
 
 .contact__overline {
-  color: var(--color-accent);
+  color: var(--color-accent-light);
   margin-bottom: var(--space-4);
 }
 
