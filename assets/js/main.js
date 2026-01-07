@@ -75,6 +75,9 @@
 
       if (!this.nav) return;
 
+      // Set initial tabindex state (menu closed by default)
+      this.setMenuTabIndex(true);
+
       this.bindEvents();
       this.handleScroll();
     },
@@ -171,6 +174,9 @@
       this.toggle.setAttribute('aria-expanded', 'true');
       document.body.classList.add('scroll-locked');
 
+      // Enable keyboard navigation for menu items
+      this.setMenuTabIndex(false);
+
       // Focus first link
       const firstLink = this.mobileMenu.querySelector('.nav__mobile-link');
       if (firstLink) {
@@ -193,8 +199,31 @@
       this.toggle.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('scroll-locked');
 
+      // Disable keyboard navigation for menu items
+      this.setMenuTabIndex(true);
+
       // Return focus to toggle
       this.toggle.focus();
+    },
+
+    /**
+     * Set tabindex for all focusable elements in mobile menu
+     * @param {boolean} disabled - If true, set tabindex="-1"; if false, remove tabindex
+     */
+    setMenuTabIndex(disabled) {
+      if (!this.mobileMenu) return;
+
+      const focusableElements = this.mobileMenu.querySelectorAll(
+        'a[href], button'
+      );
+
+      focusableElements.forEach(element => {
+        if (disabled) {
+          element.setAttribute('tabindex', '-1');
+        } else {
+          element.removeAttribute('tabindex');
+        }
+      });
     },
 
     /**
