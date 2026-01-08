@@ -2,7 +2,7 @@
 
 Professional portfolio website for Nick Gushlow, Enterprise Architect specialising in cloud-native architecture, digital transformation, and strategic technology leadership.
 
-**Live site:** [nickgushlow.com](https://nickgushlow.com) *(coming soon)*
+**Live site:** [nickgushlow.com](https://nickgushlow.com)
 
 ---
 
@@ -33,11 +33,12 @@ Target roles: Enterprise Architect | Principal Solutions Architect | Head of Arc
 
 ### Architecture Highlights
 
-- **Design system:** Token-based CSS with semantic colour scales
+- **Design system:** Token-based CSS with semantic colour scales and WCAG 2.1 Level AA compliance
 - **Responsive images:** WebP with JPEG fallbacks, srcset for multiple resolutions
-- **Accessibility:** Semantic HTML, ARIA labels, keyboard navigation
+- **Accessibility:** WCAG 2.1 Level AA compliant, semantic HTML, ARIA labels, full keyboard navigation
 - **SEO optimised:** Meta tags, Open Graph, structured sitemap
 - **Progressive enhancement:** Works with JavaScript disabled
+- **Analytics:** Privacy-friendly CloudFlare Web Analytics (GDPR compliant, no cookies)
 
 ---
 
@@ -49,6 +50,9 @@ portfolio/
 ├── 404.html                # Custom error page
 ├── robots.txt              # Search engine directives
 ├── sitemap.xml             # SEO sitemap
+│
+├── docs/
+│   └── COLOUR-DECISION-TREE.md  # WCAG-compliant colour selection guide
 │
 └── assets/
     ├── css/
@@ -74,18 +78,38 @@ portfolio/
 
 ## Design System
 
-**Colour Palette:**
-- Primary: Indigo (`#6366f1`) - trust, professionalism
-- Accent: Orange (`#f97316`) - energy, action
-- Neutrals: Slate scale for text and backgrounds
+**Colour Palette:** "Confident Clarity" v1.3
+
+**Accent Colours (WCAG 2.1 Level AA Compliant):**
+- Primary Accent: Teal 700 (`#0F766E`) - 4.54:1 contrast on white
+- Accent Dark: Teal 800 (`#115E59`) - 5.89:1 contrast (AAA for small text)
+- Accent Light: Teal 100 (`#CCFBF1`) - Backgrounds and dark mode text
+- Warm Accent: Amber 600 (`#D97706`) - Metrics and highlights
+
+**Neutrals:**
+- Slate scale (`#0F172A` to `#F8FAFC`) for text, backgrounds, and surfaces
 
 **Typography:**
-- Headings: Inter (system font stack fallback)
-- Body: System font stack for optimal performance
+- Headings: Inter (locally hosted, system font stack fallback)
+- Body: Inter (optimised for readability at 17px base size)
+- Monospace: JetBrains Mono (for technical content)
 
 **Responsive Breakpoints:**
-- Mobile: < 768px
-- Desktop: ≥ 768px
+- Mobile: < 640px (4 columns)
+- Tablet: 640-1023px (8 columns)
+- Desktop: 1024-1439px (12 columns)
+- Wide: ≥ 1440px (12 columns)
+
+**Accessibility Features:**
+- Full keyboard navigation with visible focus indicators
+- Dynamic tabindex management for mobile menu
+- ARIA labels and landmarks
+- Reduced motion preferences respected
+- Colour contrast meets WCAG 2.1 Level AA across all components
+
+**Documentation:**
+- Comprehensive colour decision tree guide (`docs/COLOUR-DECISION-TREE.md`)
+- Inline token documentation with contrast ratios in `assets/css/tokens.css`
 
 ---
 
@@ -122,12 +146,24 @@ Visit `http://localhost:8000` in your browser.
 
 ---
 
-## Performance
+## Performance & Quality
 
+**Lighthouse Scores** (verified 2026-01-07):
+- **Performance:** 99/100
+- **Accessibility:** 100/100 ✓ **Perfect Score!**
+- **Best Practices:** 96/100
+- **SEO:** 100/100
+
+**Core Web Vitals:**
 - **First Contentful Paint:** < 0.5s
 - **Time to Interactive:** < 1s
 - **Total page weight:** < 500KB
-- **Lighthouse score:** 100/100 (Performance, Accessibility, Best Practices, SEO)
+
+**Accessibility Standards:**
+- WCAG 2.1 Level AA compliant
+- All colour combinations meet contrast requirements
+- Full keyboard navigation support
+- Screen reader optimised with semantic HTML and ARIA
 
 ---
 
@@ -138,9 +174,27 @@ Visit `http://localhost:8000` in your browser.
 
 ---
 
+## Recent Updates
+
+**January 2026:**
+- ✅ Achieved 100/100 Lighthouse Accessibility score
+- ✅ Fixed mobile menu accessibility (WCAG 2.4.3 and 4.1.2 compliance)
+- ✅ Optimised colour tokens for WCAG 2.1 Level AA compliance
+- ✅ Added comprehensive colour decision tree documentation
+- ✅ Deployed to CloudFlare Pages with custom domain
+- ✅ Integrated privacy-friendly CloudFlare Web Analytics
+
+**December 2025:**
+- ✅ Initial design and development
+- ✅ Created "Confident Clarity" design system
+- ✅ Implemented responsive layout and component library
+- ✅ Added professional headshots and CV download
+
+---
+
 ## Licence
 
-© 2025 Nick Gushlow. All rights reserved.
+© 2026 Nick Gushlow. All rights reserved.
 
 Portfolio content and design are proprietary. Code structure and CSS architecture patterns may be referenced for educational purposes.
 
@@ -149,5 +203,5 @@ Portfolio content and design are proprietary. Code structure and CSS architectur
 ## Contact
 
 - **Email:** nick@gushlow.com
-- **LinkedIn:** [linkedin.com/in/nick-gushlow](https://www.linkedin.com/in/nick-gushlow)
+- **LinkedIn:** [linkedin.com/in/nickgushlow](https://www.linkedin.com/in/nickgushlow)
 - **Location:** Reading, UK (Remote | Hybrid UK-wide)
