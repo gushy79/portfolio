@@ -39,6 +39,22 @@ Review what has been accomplished in this session and update the appropriate sta
    - State clearly: "Session status saved. Safe to exit."
    - Remind user they can run `/start-session` next time to pick up where they left off
 
+8. **Ask about pushing to GitHub:**
+   - Use AskUserQuestion to ask: "Would you like to push these changes to GitHub?"
+   - Provide options: "Yes" / "No (save locally only)"
+   - Set a 30-second timeout (if user doesn't respond, treat as "No")
+   - If "Yes":
+     - Run `git status` to check for changes
+     - Create a commit with a descriptive message summarizing the session work
+     - Include co-author line: `Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>`
+     - Push to remote: `git push origin main`
+   - If "No" or timeout:
+     - Inform user: "Changes saved locally. You can push manually later with `git push origin main`"
+
+9. **Exit the session:**
+   - Output the command: `/exit`
+   - Inform user they can press Enter to exit, or continue working if needed
+
 ## File structure principle
 
 ```

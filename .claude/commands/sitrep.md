@@ -1,5 +1,5 @@
 ---
-description: Quick status check across all workstreams
+description: Quick project status check 
 ---
 
 Read all `*-status.md` files in the project root directory and provide a concise summary of:
