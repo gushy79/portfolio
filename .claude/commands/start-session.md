@@ -2,6 +2,17 @@
 description: Begin a new session - load project context and show status
 ---
 
+## Git Sync Check
+
+Run `git fetch --quiet` then `git status -sb` to compare the local `main` branch against `origin` on GitHub.
+
+- If local is **behind**: note how many commits behind and recommend pulling before starting work.
+- If local is **ahead** (unpushed commits): note it.
+- If **diverged**: flag this prominently — do not proceed without addressing it.
+- If up to date: note briefly and continue.
+
+---
+
 ## Project Context
 
 @CLAUDE.md
