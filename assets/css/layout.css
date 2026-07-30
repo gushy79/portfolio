@@ -426,11 +426,20 @@
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Avoid a lone 3rd card sitting alone in a 2-column row */
+  .card-grid--3 > :nth-child(3):last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (min-width: 1024px) {
   .card-grid--3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-grid--3 > :nth-child(3):last-child {
+    grid-column: auto;
   }
 }
 
