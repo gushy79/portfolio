@@ -1,0 +1,29 @@
+Create a social sharing preview image (Open Graph image) for a professional portfolio website.
+
+SPECIFICATIONS:
+- Dimensions: 1200x630 pixels
+- Background: Solid #1E293B (deep slate)
+
+CONTENT LAYOUT:
+- Left side (60%): Text content
+- Right side (40%): Subtle decorative element
+
+TEXT CONTENT:
+- Small text at top: "TECHNOLOGY LEADER | ENTERPRISE ARCHITECT" in #0F766E (teal), 14px equivalent
+- Main headline: "Nick Gushlow" in white, large bold text (~60px equivalent)
+- Subheadline: "Turning digital complexity into commercial success" in #94A3B8 (grey), ~24px equivalent
+- Bottom left: "nickgushlow.com" in #64748B, 16px equivalent
+
+DECORATIVE ELEMENT:
+- Right side: Abstract geometric pattern suggesting architecture/structure
+- Use thin lines in #334155 (lighter slate)
+- Subtle, professional, not distracting
+- Could be: orthogonal grid lines, abstract building outline, or minimal circuit pattern
+
+OVERALL:
+- Clean, professional, enterprise-appropriate
+- Should be legible at small sizes (as thumbnail)
+- No photos or complex imagery
+- Typography-focused
+
+Export as PNG, optimised for web.
