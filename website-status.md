@@ -1,34 +1,20 @@
 # QUICK STATUS (for Claude)
 
 **Project:** Personal Portfolio Website (Standalone Project)
-**Phase:** 8 - REPOSITIONING (IN PROGRESS, on `refocus` branch)
-**Last updated:** 2026-07-30
+**Phase:** 8 - REPOSITIONING ✅ LIVE (merged to `main`, deployed to production)
+**Last updated:** 2026-08-03
 
-## Phase 8: Repositioning to Technology Leader (2026-07-30, branch: `refocus`)
-Broadened the site from pure "Enterprise Architect" to "Technology Leader & Enterprise Architect," targeting senior technology leadership roles (Head of / CTO / CIO-adjacent) without naming specific titles on-page.
+## Phase 8: Repositioning to Technology Leader (2026-07-28 to 2026-07-30) - COMPLETE
+Broadened the site from pure "Enterprise Architect" to "Technology Leader & Enterprise Architect," targeting senior technology leadership roles (deliberately without naming specific titles on-page). New case study added for the current Westcoast AI governance engagement, AI governance threaded lightly through hero/capabilities, Specsavers claims corrected, full AI-writing-tell cleanup, og-image regenerated to match, tablet card-grid layout bug fixed, meta description trimmed for SEO. Merged to `main` and verified live on both desktop and mobile.
 
-**Done on this branch:**
-- Hero, meta tags, capability cards, footer reworded for the broader positioning
-- Added a third case-study card for the current Westcoast AI governance/operating model engagement (worded to stay accurate after the contract ends - no "current" language)
-- Specsavers card reworded: dropped "technical"/"dotted-line"/headcount claims per Nick's correction, now "leading architects across multiple digital programmes"
-- Light AI governance references threaded through hero + capability card 3 (deliberately not the headline focus - core brand equity is still the EA/leadership track record)
-- Full pass to remove AI-writing tells: repeated rhetorical formulas, duplicate sentence openers, double-dash parentheticals, all em-dashes (Nick doesn't use them)
-- Meta description trimmed from 247 to 158 characters (was getting truncated in search results)
-- CSS fix: `.card-grid--3` now spans a lone 3rd card full-width at the tablet (640-1023px) breakpoint instead of leaving it stranded in a 2-column row
-- Pushed to `origin/refocus`; CF Pages preview deployments confirmed working (each push gets a new commit-hash preview URL)
+**See `website-session-logs.md` (2026-07-28 to 2026-07-30 entry) for full decision rationale, rejected options, and the PR-vs-direct-merge lesson learned.**
 
-**Known open items (not yet actioned):**
-- LinkedIn profile (headline/About/Skills) still says pure "Enterprise Architecture Leader" - deliberately left behind for now; site leads, LinkedIn catch-up is separate future work
-- `og-image.jpg` (last touched 5 Jan) not yet confirmed consistent with new positioning - Nick was checking whether it has old "Enterprise Architect" text baked into the image
-- Not yet merged to `main` / deployed to production
+**Not yet actioned (see Next Steps):**
+- Production Lighthouse re-run (only ran locally pre-merge; local Performance read 95 due to no CDN, expected to read ~99 on the CF edge but not yet confirmed)
+- LinkedIn profile realignment (deliberately deferred - site leads, LinkedIn stays "Enterprise Architecture Leader" for now)
+- CF Pages preview-deployment cleanup (cosmetic only, dashboard-only, no CLI access configured here)
 
-## Local Lighthouse (2026-07-30, `refocus` branch, run via `npx lighthouse` against `python3 -m http.server` - not the CloudFlare edge, so Performance reads lower than production numbers below)
-- **Performance:** 95/100 (local server lacks CDN/compression/HTTP2 that CF Pages provides in production)
-- **Accessibility:** 100/100 ✅ no regression
-- **Best Practices:** 96/100
-- **SEO:** 100/100 ✅
-
-## Prior Production Lighthouse Scores (2026-01-07 19:09:45, still live on `main`)
+## Production Lighthouse Scores (2026-01-07 19:09:45 - predates Phase 8, needs re-running)
 - **Performance:** 99/100 ✅
 - **Accessibility:** 100/100 ✅ **PERFECT!**
 - **Best Practices:** 96/100 ✅ (CloudFlare Analytics beacon - testing environment only)
@@ -117,14 +103,13 @@ Broadened the site from pure "Enterprise Architect" to "Technology Leader & Ente
 - **LinkedIn posts:** Deprioritized - may derive from website perspectives later
 
 ## Next Steps (offer these)
-1. **Check `og-image.jpg`** - confirm it doesn't have old "Enterprise Architect" text baked into the image before merging `refocus`
-2. **Merge `refocus` to `main`** - once Nick's happy with the preview, open a PR or merge directly to go live
-3. **Re-run Lighthouse against production** after merge to confirm scores hold on the CloudFlare edge
-4. **LinkedIn realignment** - update headline/About/Skills to match the site's broadened "Technology Leader" positioning (explicitly deferred, not blocking)
-5. **Implement Perspectives section** - Add section to website (after 3 pieces ready from perspectives workstream)
-6. **Gather testimonials** - Reach out to former colleagues for LinkedIn recommendations
-7. **Monitor analytics** - Check CloudFlare Web Analytics for visitor insights
-8. **Automated contrast testing** - Create accessibility test suite (optional enhancement)
+1. **Re-run Lighthouse against production** to confirm scores hold on the CloudFlare edge post-Phase 8
+2. **LinkedIn realignment** - update headline/About/Skills to match the site's broadened "Technology Leader" positioning (explicitly deferred, not blocking)
+3. **CF Pages preview cleanup** - optional, dashboard-only (Settings/Deployments tab); no functional need
+4. **Implement Perspectives section** - Add section to website (after 3 pieces ready from perspectives workstream)
+5. **Gather testimonials** - Reach out to former colleagues for LinkedIn recommendations
+6. **Monitor analytics** - Check CloudFlare Web Analytics for visitor insights
+7. **Automated contrast testing** - Create accessibility test suite (optional enhancement)
 
 ## Action Items (for Nick)
 - [x] Deploy portfolio to CloudFlare Pages
@@ -136,7 +121,10 @@ Broadened the site from pure "Enterprise Architect" to "Technology Leader & Ente
 - [x] Add portfolio URL to LinkedIn profile
 - [x] Deploy mobile menu accessibility fix (git push)
 - [x] Run final Lighthouse audit to verify 100/100 Accessibility ✅ **PERFECT SCORE!**
+- [x] Reposition site to "Technology Leader & Enterprise Architect" and deploy to production (Phase 8)
 - [ ] Gather testimonials from former colleagues
+- [ ] Re-run Lighthouse against production post-Phase 8
+- [ ] Decide on LinkedIn realignment timing
 
 ## Deployment Info
 - **Live URL:** https://nickgushlow.com

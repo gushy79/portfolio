@@ -1002,3 +1002,48 @@ Correct pattern:
 
 **No action required on website** - fully optimized and deployed.
 
+---
+
+## SESSION: 2026-07-28 to 2026-07-30 (Repositioning: Technology Leader)
+
+### Context
+
+Session resumed after a system crash mid-task; `refocus` branch already had uncommitted repositioning edits in `index.html`. Reconstructed intent from the diff and confirmed open questions with Nick rather than guessing.
+
+### Positioning change
+
+Broadened from pure "Enterprise Architect" to **"Technology Leader & Enterprise Architect"**, targeting senior technology leadership roles without naming specific titles (Nick's call: "senior technology leadership roles," not "Head of / CTO / CIO" spelled out - too aggressive a jump to name explicitly). Reworded hero, meta tags, capability cards, footer accordingly.
+
+### Case studies
+
+- Cross-checked new claims against Nick's LinkedIn working-copy exports (`~/Downloads/LinkedIn *.md`) - Oxa's "reporting to the CIO" and Specsavers' "chaired DDA, dotted-line leadership of 5 architects" both confirmed accurate against the LinkedIn source.
+- Nick later corrected the Specsavers wording anyway: dropped "technical," "dotted-line," and the "5" headcount in favour of "leading architects across multiple digital programmes" (didn't report into him, but did manage their focus/workload - the more precise framing).
+- Added a third case-study card for the live Westcoast AI governance/operating model contract. Deliberately worded with no "current"/date language so it stays accurate after the contract ends (Nick's explicit ask, to avoid a maintenance trap).
+- Decided (Nick's call) to add AI governance as a light thread - hero line, one capability card, one case study - not a headline rebrand. Core brand equity is still the 20+ year EA/leadership track record; the AI governance contract is one young engagement.
+
+### AI-writing cleanup
+
+Nick asked for a pass to remove "AI writing" tells. Found and fixed: duplicate sentence openers ("I build and lead..." used verbatim in adjacent sections), a repeated accelerates-not-impedes antithesis formula used 3x, a "turning X into Y" construction reused outside its one intentional branded use, double-dash parentheticals, and the hedge word "emerging." Nick then asked for zero em-dashes specifically ("that's not me, I don't even know how to type an em-dash") - removed the one remaining instance.
+
+### QA
+
+- Ran a local Lighthouse pass (`npx lighthouse` against `python3 -m http.server`): Accessibility 100, SEO 100, Best Practices 96, Performance 95 (lower than production's 99 due to no CDN/HTTP2 locally - expected, not a regression).
+- Found via CSS inspection (not a screenshot - several headless-Chrome attempts to automate a tablet-breakpoint screenshot burned significant time fighting the hero's `min-height: 100vh` and the site's scroll-reveal animations, eventually abandoned in favour of just reading the grid math) that `.card-grid--3` left a lone 3rd card stranded in a 2-column layout at the 640-1023px tablet breakpoint. Fixed with a targeted `:nth-child(3):last-child` rule.
+- Trimmed the meta description from 247 to 158 characters (Google truncates around 155-160; the old one was getting cut off in search results).
+- Did successfully verify mobile (390px) end-to-end after production deploy, using a local copy with animations forced visible and the hero pinned to a fixed height (sidesteps the same vh trap) - full page reads cleanly, no overflow or wrapping issues.
+
+### og-image
+
+Old image (`og-image.jpg`, untouched since 5 Jan) still said "Enterprise Architect" and used the wrong teal (`#0D9488`, the design system's hover-only token, not `#0F766E` used for actual text/CTAs). Produced an updated Gemini prompt (saved to `docs/og-image-prompt.txt`) reflecting the new positioning and correct brand colour. Nick generated a new PNG; resized 1727x911 -> 1200x630, palette-quantized to 128 colours (730KB -> 503KB - 32/64 colours washed out the teal, 128 held it). Kept PNG over JPEG since it's flat colour + sharp text, not a photo. Swapped `og:image`/`twitter:image` references and deleted the old jpg.
+
+### Deployment
+
+- Pushed `refocus` to GitHub across several commits; confirmed CF Pages preview deployments work (each push -> new commit-hash preview URL).
+- **Merged directly to `main` without a PR** (fast-forward, `git merge --ff-only`) when Nick said "go for it." Nick flagged this afterward - for a solo static site it's low-risk, but doesn't fit his own governance/audit-trail philosophy as well as a PR would have. **Decision: default to opening a PR for anything going to `main` going forward, unless told otherwise.**
+- Deleted the merged `refocus` branch (local + remote) as standard post-merge hygiene.
+- CF Pages preview deployments (from the various pushes) were left in place - dashboard-only cleanup, no `wrangler` CLI available in this environment to script it, and they don't cost anything or affect production, so treated as optional/cosmetic.
+
+### Verified live
+
+`nickgushlow.com` confirmed serving the new title, copy, og-image, and CSS fix directly (not just the preview). Mobile QA (above) run against production-equivalent content post-deploy.
+
